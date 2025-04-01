@@ -81,7 +81,7 @@ class Game:
                 return Node(value, 0, 0, None, "AI")
         
 
-    def minimaxfuuuuck(self,pozit, depth, isMaximising=True):
+    def minimaxfunk(self,pozit, depth, isMaximising=True):
         if depth==0 or pozit.isfinished():
             return pozit.heristic(), pozit
 
