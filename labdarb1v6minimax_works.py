@@ -91,14 +91,14 @@ class Game:
         if isMaximising:
             bestscore=-math.inf
             for child in children:
-                score,move=self.minimaxfuuuuck(child, depth-1,False)
+                score,move=self.minimaxfunk(child, depth-1,False)
                 bestscore=max(score, bestscore)
                 if (score > bestscore): best_move = move
             return bestscore, best_move
         else:
             bestscore= +math.inf
             for child in children:
-                score,move=self.minimaxfuuuuck(child, depth-1,True)
+                score,move=self.minimaxfunk(child, depth-1,True)
                 bestscore=min(score, bestscore)
                 if (score < bestscore): best_move = move
             return bestscore, best_move
@@ -110,7 +110,7 @@ if __name__ == "__main__":
     
     while not game.curentpoz.isfinished():
         if game.curentpoz.gaj_veicejs=="AI":
-            _, game.curentpoz=game.minimaxfuuuuck(game.curentpoz,99,True)
+            _, game.curentpoz=game.minimaxfunk(game.curentpoz,99,True)
             # if (game.curentpoz.left is not None): game.curentpoz = game.curentpoz.left 
             # elif(game.curentpoz.middle is not None): game.curentpoz = game.curentpoz.middle
             # elif(game.curentpoz.right is not None): game.curentpoz = game.curentpoz.right
